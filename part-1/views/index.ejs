@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>EJS Tutorial</h1>
+    <h1>
+      <!--displaying or printing variable in EJS-->
+      welcome <%=name%>
+
+      <!--creating variable and displaying it in EJS-->
+      <% var i = 10; %> <%=i%>
+
+      <!--comment in EJS-->
+      <%# comment will not be present in rendered HTML %>
+
+      <!--if-->
+      <% if(name2){%> welcome again <%=name2%> <%}%>
+
+      <!--if with condition-->
+      <% if(id==10){%> number is <%=id%> <%}%>
+
+      <!--if - else-->
+      <% if(id==10){%> number is <%=id%> <%}else{%> number is not 10 <%}%>
+
+      <!--if-else-if condition-->
+      <% if(id==10){%> number is <%=id%> <%}else if(id==11){%> number is <%=id%> <%}else{%> number is neither 10 nor 11
+      <%}%>
+
+      <!--for loop-->
+      <br />
+      <% for(i=0;i<=4;i++){%>
+      <h2>marks of <%=i%> subject is <%=marks[i]%></h2>
+      <%}%>
+
+      <!--for-in loop-->
+      <% for(const key in marks){%>
+      <h2>key is: <%=key%> value at key is: <%=marks[key]%></h2>
+      <%}%>
+
+      <!--for-of loop-->
+      <% for(const mark of marks){%>
+      <h2>mark is: <%=mark%></h2>
+      <%}%>
+      <!--while loop-->
+      <%j=10;%> <% while(j>=7){%>
+      <h2>Number is <%=j%></h2>
+      <%j--;%> <%}%>
+
+      <!--forEach loop-->
+      <% marks.forEach((value)=>{%> <%=value%> <%})%>
+
+      <!--function call-->
+      <% var current = new Date()%>
+      <%=current%>
+    </h1>
+  </body>
+</html>
